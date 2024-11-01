@@ -1,0 +1,24 @@
+
+train:
+  num_epochs: 50
+  batch_size: &batch_size 10
+  accumulation_steps: 4
+  learning_rate: 0.001
+
+
+data:
+  dataset_name: CIC2020_8076
+  data_name: drebin
+  ori_model_name: drebin_test
+  file_name: drebin_test
+  data_dim: 107149
+  data_dir:  H:/09SE/Tools/7Drebin/data
+  train_txt: ../data_split/CIC2020_8076_label1/train.txt
+  val_txt: ../data_split/CIC2020_8076_label1/test.txt
+  batch_size: *batch_size
+  target_names: ["0", "1"]
+
+
+model:
+  model_name: DNN
+
