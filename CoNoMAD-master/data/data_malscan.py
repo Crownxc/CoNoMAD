@@ -60,14 +60,7 @@ class Data_Malscan_Train(Data_Malscan):
         self.target_names = target_names
 
 
-        print("开始聚类")
-        # kmeans = KMeans(n_clusters=num_clusters, random_state=0)
-        # kmeans.fit(self.data)
-        # print("聚类完成")
-        # labels = kmeans.labels_
-        # for i, label in enumerate(labels):
-        #     self.cluster_label.append(label)
-        # print(self.cluster_label)
+        print("Start clustering")
 
         ncentroids = 2
         niter = 100
@@ -75,7 +68,7 @@ class Data_Malscan_Train(Data_Malscan):
         d = self.data.shape[1]
         kmeans = faiss.Kmeans(d, ncentroids, niter=niter, verbose=verbose)
         kmeans.train(self.data[:])
-        print("聚类完成")
+        
         D, I = kmeans.index.search(self.data, 1)
         self.cluster_label = I
 
