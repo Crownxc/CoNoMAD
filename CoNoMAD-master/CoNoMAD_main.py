@@ -33,8 +33,8 @@ parser.add_argument('--gpus',
                     help='gpus')
 parser.add_argument('--noise_ratio', default=0.45, type=float, required=False)
 parser.add_argument('--random_seed', default=42, type=int, required=False)
-parser.add_argument('--order', default=False, type=bool, required=False, help='训练集样本顺序')
-parser.add_argument('--order_type', default=0, type=int, required=False, help='样本顺序类型')
+parser.add_argument('--order', default=False, type=bool, required=False, help='Training set sample order')
+parser.add_argument('--order_type', default=0, type=int, required=False, help='Sample order type')
 parser.add_argument('--alpha', default=0.4, type=float, required=False)
 
 
