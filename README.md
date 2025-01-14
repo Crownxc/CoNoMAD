@@ -46,5 +46,5 @@ The links to the obfuscation tool we used are:
 ## 5. CoNoMAD Code
 
 * train_ori_model.py： is used to obtain a model for predicting pseudo labels
-* train_ori_model.py： is the CoNoMAD main function to get the robust detector
+* CoNoMAD_main.py： is the CoNoMAD main function to get the robust detector
 * test.py： is used to get Precision (P), Recall (R), F1 metrics
